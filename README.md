@@ -22,11 +22,16 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - Heidi SQL
 - osTicket Installation Files (Link Provided Below)
 
-<h2>Install/Enable IIS in Windows</h2>
+<h2>Step-by-Step Instructions</h2>
+
+<h3>Step 1: Install/Enable IIS in Windows</h3>
 Access the "Control Panel" from start menu. Go to "Programs", then "Programs and Features". Then select "Turn Windows features on or off". On the pop up window, select the box for "Internet Information Services." Select appropriate boxes (See below).
 </p>
 <br/>
-<img src="https://i.imgur.com/xsbKF1d.png" height="80%" width="80%" alt="Enable IIS"/>
+<img src="https://i.imgur.com/xsbKF1d.png" height="80%" width="60%" alt="Enable IIS"/>
+<img src="https://i.ibb.co/Tt3vHjM/IIS-2.jpg" height="80%" width="60%" alt="Enable IIS"/>
+<img src="https://i.ibb.co/xjL3fCZ/IIS-3.png" height="80%" width="60%" alt="Enable IIS"/>
+
 </p>
 <h3> Step 2: Install Web Platform Installer </h3> Click the following link for the required downloads https://bit.ly/3WFRPdg. 
 Download the Web Platform Installer and open it.
