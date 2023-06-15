@@ -75,6 +75,7 @@ We will set New root password with: Password1
 <img src="https://i.ibb.co/9YkHcry/MySQL.jpg" height="60%" width="40%" alt="MySQL"/>
 
 then Execute process
+<br/>
 <img src="https://i.ibb.co/12xR2wk/MySQL-2.jpg" height="60%" width="40%" alt="MySQL"/>
 
 
