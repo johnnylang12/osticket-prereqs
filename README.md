@@ -77,20 +77,87 @@ We will set New root password with: Password1
 then Execute process
 <br/>
 <img src="https://i.ibb.co/12xR2wk/MySQL-2.jpg" height="60%" width="40%" alt="MySQL"/>
+<br/>
+<br/>
+Now that we have everything installed we will then open the program as administrator (this is important!)
+<br/>
+<br/>
+<img src="https://i.ibb.co/kQDq7nt/IIS-4.jpg" height="60%" width="40%" alt="IIS"/>
+<br/>
+<br/>
+Next let's register PHP from IIS. Select the php path C:\PHP and select the file php-cgi.exe then restart the server.
+<br/>
+<br/>
+<img src="https://i.ibb.co/yqGyh75/IIS-5.jpg" height="80%" width="60%" alt="IIS"/>
+<br/>
+<img src="https://i.ibb.co/Lzm6v0y/IIS-6.jpg" height="80%" width="60%" alt="IIS"/>
+<br/>
+<img src="https://i.ibb.co/tMpZLGz/IIS-7.jpg" height="80%" width="60%" alt="IIS"/>
+<br/>
+<img src="https://i.ibb.co/6tmz5TZ/IIS-8.jpg" height="80%" width="60%" alt="IIS"/>
+<br/>
+<p>
+
+<h3> Step 4: Install osTicket  </h3> Click the following link for the required downloads https://bit.ly/3WFRPdg. 
+From the link provided, download and install osTicket v1.15.8. <br/>
+Inside installation folder, copy "upload" folder to path c:\inetpub\wwwroot and rename the folder to "osTicket"
+<br/>
+<br/>
+<img src="https://i.ibb.co/v3fF92C/IIS-9.jpg" height="80%" width="60%" alt="IIS"/>
+Restart IIS again and on the left hand side, go to Sites -> Default -> osTicket and on the right, click “Browse *:80”
+<br/>
+<img src="https://i.ibb.co/NKrX48X/IIS-10.jpg" height="80%" width="60%" alt="IIS"/>
+We can see some extensions are not enabled on osTicket
+<img src="https://i.ibb.co/GJ06L84/osTicket.jpg" height="80%" width="60%" alt="osTicket"/>
+Let's enable some of the extensions. Go back to PHP manager, on the bottom click "Enable or disable an extension" <br/>
+We want to enable php_imap.dll, php_intl.dll, and php_opcache.dll
+<br/>
+<br/>
+<img src="https://i.ibb.co/yqGyh75/IIS-5.jpg" height="80%" width="60%" alt="IIS"/>
+<img src="https://i.ibb.co/5134Rxv/IIS-11.jpg" height="80%" width="60%" alt="IIS"/>
+<img src="https://i.ibb.co/qM3dYRP/IIS-12.jpg" height="80%" width="60%" alt="IIS"/>
+Now we need to rename file "ost-sampleconfig.php" to "ost-config.php" in path c:\inetpub\wwwroot\osTicket\include <br/>
+We will need to add permissions to the file. <br/>
+Right click "ost-config.php" file -> properties -> Security -> Advanced -> Disable inheritance -> Remove all inherited permissions from this object. <br/>
+Now we will add new permissions
+<br/>
+<br/>
+Click Add -> Select a principal. Then type "everyone" in the box and click ok. 
+<img src="https://i.ibb.co/CVr0r80/IIS-13.jpg" height="80%" width="60%" alt="IIS"/>
+<img src="https://i.ibb.co/n1JvLTQ/IIS-14.jpg" height="80%" width="60%" alt="IIS"/>
+Make sure "Full control" is checked then press ok -> apply -> ok
+<img src="https://i.ibb.co/9HVBB1R/IIS-15.jpg" height="80%" width="60%" alt="IIS"/>
+<img src="https://i.ibb.co/pJKtvDR/IIS-16.jpg" height="80%" width="60%" alt="IIS"/>
+<p>
+
+<h3> Step 5: Install HeidiSQL </h3> Click the following link for the required downloads https://bit.ly/3WFRPdg. 
+From the link provided, download and install HeidiSQL_12.3.0.6589_Setup.exe and run through installation wizard.<br/>
+Program will start once installation is finished. <br/><br/>
+
+Click new, we want to make sure username is root and password is Password1. Click open.
+<img src="https://i.ibb.co/9HkGpDb/Heidi.jpg" height="80%" width="60%" alt="IIS"/>
+<img src="https://i.ibb.co/Qk2Wmb0/Heidi2.jpg" height="80%" width="60%" alt="IIS"/>
+<br/>
+Now we will create a database within HeidiSQL. <br/>
+Right click on the left side -> Create new -> Database. We will name this "osTicket"
+<img src="https://i.ibb.co/fpqqz21/Heidi3.jpg" height="80%" width="60%" alt="IIS"/>
+<img src="https://i.ibb.co/k5mrhxk/Heidi4.jpg" height="80%" width="60%" alt="IIS"/>
+<br/>
+<br/>
+Now back on osTicket we can fill out and complete the setup.
+<img src="https://i.ibb.co/HGKrHmK/os-Ticket2.jpg" height="60%" width="60%" alt="IIS"/>
+
+We just need to clean up now. We want to delete the "setup" folder in path c:\inetpub\wwwroot\osTicket. <br/>
+We also want to set the permissions back to read only. in the ost-config.php file. 
+<img src="https://i.ibb.co/Lz6690f/IIS-17.jpg" height="80%" width="60%" alt="IIS"/>
+<img src="https://i.ibb.co/sbnT8Dg/IIS-18.jpg" height="80%" width="60%" alt="IIS"/>
+<br/>
+<br/>
+Last step is to just log in! Go to localhost/osTicket/scp/login.php and login!
+<img src="https://i.ibb.co/NNvSFRD/os-Ticket3.jpg" height="80%" width="60%" alt="osTicket"/>
+
+Congrats! You have now successfully installed and setup osTicket!
 
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
