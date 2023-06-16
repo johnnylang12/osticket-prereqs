@@ -144,8 +144,10 @@ Right click on the left side -> Create new -> Database. We will name this "osTic
 <img src="https://i.ibb.co/k5mrhxk/Heidi4.jpg" height="80%" width="60%" alt="IIS"/>
 <br/>
 <br/>
-Now back on osTicket we can fill out and complete the setup.
+Now back on osTicket we can fill out and click install to complete the setup.
 <img src="https://i.ibb.co/HGKrHmK/os-Ticket2.jpg" height="60%" width="60%" alt="IIS"/>
+<img src="https://i.ibb.co/cQbwLCh/os-Ticket4.jpg" height="60%" width="60%" alt="IIS"/>
+
 
 We just need to clean up now. We want to delete the "setup" folder in path c:\inetpub\wwwroot\osTicket. <br/>
 We also want to set the permissions back to read only. in the ost-config.php file. 
